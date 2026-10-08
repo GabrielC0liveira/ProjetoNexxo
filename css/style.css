@@ -1,0 +1,893 @@
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;   
+}
+body{
+    background-color: #ECECEC;
+    margin: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ECECEC;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 85px;
+    left: 0;
+    z-index: 10;
+}
+.PaginaHome{
+    padding-top: 120px;
+}
+.LogoHeader{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+}
+.LogoHeader img{
+    width: 60px;
+}
+.NomeEmpresa{
+    font-size: 30px;
+    font-weight: 700;
+    cursor: default;
+}
+
+nav ol{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    position: relative;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #000086;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+.IconesHeader {
+    display: flex;
+    gap: 30px;
+}
+.IconesHeader i{
+    font-size: 22px;
+    color: black;
+    transition: 0.3s;
+}
+.IconesHeader i:hover{
+    color: #708BE4;
+}
+.HeroSection{
+    display: flex;
+    align-items: center;
+    margin: 40px 100px 0;
+    gap: 110px;
+    position: relative
+}
+.LinhasDecorativas {
+    position: absolute;
+    top: -40px;
+    left: -100px;
+    width: calc(100% + 200px);
+    height: calc(100% + 80px);
+    z-index: 0;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.LinhaDecorativa {
+    fill: none;
+    stroke: #708BE4;
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+.LinhaEscura{
+    stroke: #000086;
+}
+.LinhaClara{
+    stroke: #85A6BD;
+}
+.HeroSection img{
+    width: 500px;
+    position: relative;
+    z-index: 1;
+}
+.Branding{
+    font-size: 50px;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 1;
+}
+.Descricao{
+    font-size: 18px;
+    margin: 0 0 50px 0;
+    position: relative;
+    z-index: 1;
+}
+.Botoes{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+.BotaoPromo{
+    background-color: #708BE4;
+    font-weight: 500;
+    font-size: 18px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.BotaoPromo:hover{
+    opacity: 0.7;
+    font-size: 20px;
+    width: 190px;
+    height: 55px;
+}
+.BotaoCompre{
+    background-color: #000086;
+    font-weight: 500;
+    font-size: 18px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.BotaoCompre:hover{
+    opacity: 0.7;
+    font-size: 20px;
+    width: 190px;
+    height: 55px;
+}
+.Dashboard{
+    background-color: #85A6BD;
+    position: relative;
+    margin-top: 150px;
+}
+.Onda {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+.Onda path {
+    fill: #85A6BD;
+}
+.OndaTopo {
+    top: -99px;
+}
+.OndaBaixo {
+    bottom: -99px;
+    transform: rotate(180deg);
+}
+.TituloSecao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 20px 100px 0;
+}
+.TituloSecao::before,
+.TituloSecao::after{
+    content: "";
+    width: 350px;
+    height: 2px;
+    background-color: #000086;
+    margin: 20px 0 0;
+}
+.TituloSecao h3 {
+    margin: 20px 0 0;
+    font-size: 35px;
+    font-weight: 500;
+}
+.Produtos{
+    margin: 40px 100px 20px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 350px);
+    column-gap: 40px;
+    row-gap: 60px;
+}
+.Produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.CardProduto{
+    background-color: white;
+    width: 350px;
+    display: flex;  
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 40px 30px;
+}
+.Tipo{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0 0;
+}
+.Desconto{
+    font-size: 15px;
+    margin: 0 10px 0;
+    color: #939292;
+    text-decoration: line-through;
+}
+.PrecoCarrinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 600;
+}
+.Preco{
+    font-size: 20px;
+    margin: 0;
+}
+.PrecoCarrinho a{
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.PrecoCarrinho a:hover{
+    color: #708BE4;
+}
+.ComprarAgora{
+    background-color: #000086;
+    font-weight: 500;
+    font-size: 18px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+.ComprarAgora:hover{
+    opacity: 0.7;
+    font-size: 20px;
+    width: 190px;
+}
+footer{
+    background-color: #85A6BD;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 150px 0 0;
+    padding: 50px 100px;
+}
+.LogoFooter{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+}
+.LogoFooter img{
+    width: 60px;
+}
+.Informacoes {
+    display: flex;
+    gap: 200px;
+}
+.CategoriasFooter,
+.EmpresaFooter,
+.SuporteFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.FooterDivisao{
+    color: #000086;
+    cursor: default;
+    font-size: 20px;
+}
+.Informacoes a{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+     transition: 0.2s;
+}
+.Informacoes a:hover {
+    color: #ffffff;
+}
+
+/* Pagina de Login */
+.Login {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 22% 45%,
+            rgba(112, 139, 228, 0.20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 42% 70%,
+            rgba(133, 166, 189, 0.18),
+            transparent 30%
+        ),
+        #ECECEC;
+}
+.DadosLogin {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.CaixaLogin {
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 35px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+.TopoLogin {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.TopoLogin h2 {
+    margin: 0;
+    font-size: 20px;
+}
+.LinkHome {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.LinkHome:hover {
+    color: #85A6BD;
+}
+.Formulario{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.Campo{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+.Campo label{
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.Campo input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(133, 166, 189, 0.8);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    padding: 0 15px;
+    font-size: 15px;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.Campo input:focus {
+    border-color: #708BE4;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0 0 0 3px rgba(112, 139, 228, 0.12);
+}
+.AcessarConta{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #000086;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: white;
+    transition: 0.3s;
+}
+.AcessarConta:hover{
+    opacity: 0.7;
+}
+.ContaGoogle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.EntrarCriarConta a{
+    text-decoration: none;
+    color: #000086;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.EntrarCriarConta a:hover{
+    color: #708BE4;
+}
+.Google{
+    width: 220px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #708BE4;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.Google:hover{
+    opacity: 0.7;
+}
+.ImgLogin{
+    width: 50%;
+    height: 100vh;
+}
+.ImgLogin img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.OndaLogin {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 5;
+    pointer-events: none;
+}
+.OndaLogin path {
+    fill: #85A6BD;
+}
+.OndaLoginTopo {
+    top: 0;
+    transform: rotate(180deg);
+}
+.OndaLoginBaixo {
+    bottom: 0;
+}             
+
+/* PAGINA DE CRIAR CONTA */
+.CriarConta {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 25% 40%,
+            rgba(112, 139, 228, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 75% 65%,
+            rgba(133, 166, 189, 0.25),
+            transparent 35%
+        ),
+        #ECECEC;
+}
+.Cadastro {
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 50px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 2;
+}
+.TopoCadastro {
+    text-align: center;
+}
+.TopoCadastro h2 {
+    font-size: px;
+    margin: 0;
+}
+.TopoCadastro p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+.TituloCadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.TituloCadastro h2 {
+    margin: 0;
+    font-size: 30px;
+}
+.TituloCadastro .LinkHome {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.TituloCadastro .LinkHome:hover {
+    color: #85A6BD;
+}
+.FormularioConta {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 12px;
+}
+.FormularioConta .Campo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.FormularioConta .Campo label {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+.FormularioConta .Campo input {
+    width: 100%;
+    height: 42px;
+    border: 1px solid rgba(133, 166, 189, 0.8);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    padding: 0 12px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+.FormularioConta .Campo input:focus {
+    border-color: #708BE4;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0 0 0 3px rgba(112, 139, 228, 0.12);
+}
+.CampoNome,
+.CampoEmail {
+    grid-column: 1 / 3;
+}
+.BotaoCriarConta {
+    grid-column: 1 / 3;
+    width: 250px;
+    height: 42px;
+    justify-self: center;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000086;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.BotaoCriarConta:hover {
+    opacity: 0.7;
+}
+.EntrarLogin {
+    margin-top: 20px;
+    font-size: 15px;
+}
+.EntrarLogin a {
+    color: #000086;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.EntrarLogin a:hover {
+    color: #708BE4;
+}
+
+/** PÁGINA DE COMPRA **/
+
+.SecaoCompra {
+    width: 85%;
+    max-width: 1300px;
+    height: 480px;
+    margin: 150px auto 80px;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.SecaoCompra::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background:
+        radial-gradient(
+            circle at 25% 40%,
+            rgba(112, 139, 228, 0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 75% 70%,
+            rgba(133, 166, 189, 0.35),
+            transparent 40%
+        );
+
+    z-index: 0;
+    pointer-events: none;
+}
+.LadoImagem {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+}
+.DestaqueProduto img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+.LadoInformacoes {
+    width: 50%;
+    height: 100%;
+    background-color: #85A6BD;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+}
+.TipoProduto {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.45;
+    margin: 0;
+}
+.Avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.Estrelas {
+    display: flex;
+    gap: 5px;
+}
+.Estrelas i {
+    color: #FFF500;
+    font-size: 17px;
+}
+.Avaliacao span {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+}
+.DadosVenda {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+}
+.VendidoPor,
+.CodVenda {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+}
+.DetalhesCompra {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+.AreaPreco {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+.PrecoAntigo {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+    text-decoration: line-through;
+    margin: 0;
+}
+.PrecoAtual {
+    color: white;
+    font-size: 34px;
+    font-weight: 700;
+    margin: 8px 0 0;
+}
+.Parcelamento {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+    margin: 2px 0 0;
+}
+.AreaEntrega {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+.Estoque {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+}
+.Estoque i {
+    color: white;
+    font-size: 15px;
+}
+.Frete {
+    width: 100%;
+    margin-top: 20px;
+}
+.AbrirFrete {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.AbrirFrete span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.AbrirFrete:hover {
+    opacity: 0.7;
+}
+.SetaFrete {
+    font-size: 11px;
+    transition: 0.3s;
+}
+.CalculoFrete {
+    display: none;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 12px;
+}
+.InputCep {
+    flex: 1;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid rgba(133, 166, 189, 0.8);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    color: #333;
+    font-size: 12px;
+    outline: none;
+    transition: 0.3s;
+}
+.InputCep::placeholder {
+    color: #666;
+}
+.InputCep:focus {
+    border-color: #708BE4;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0 0 0 3px rgba(112, 139, 228, 0.12);
+}
+.BotaoCalcularFrete {
+    width: 85px;
+    height: 38px;
+    border: none;
+    border-radius: 8px;
+    background-color: #000086;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.BotaoCalcularFrete:hover {
+    opacity: 0.7;
+}
+.LadoInformacoes .ComprarAgora {
+    width: 60%;
+    height: 55px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000086;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: auto;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+.LadoInformacoes .ComprarAgora:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
