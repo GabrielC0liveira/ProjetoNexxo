@@ -12,33 +12,78 @@
         href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
 
     <title>Home | Nexxo</title>
 </head>
 
 <body>
     <header>
+
         <div class="LogoHeader">
-            <img src="img/LogoNexxo.png" alt="Logo da empresa Nexxo">
+            <img src="img/LogoNexxo.png" alt="Logo Nexxo">
             <p class="NomeEmpresa">EXXO</p>
         </div>
 
-        <nav>
+        <nav id="MenuNavegacao">
+
+            <button class="FecharMenu" type="button" aria-label="Fechar menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
             <ol>
-                <li><a href="">Home</a></li>
-                <li><a href="">Sobre Nós</a></li>
-                <li><a href="Compra.html">Produtos</a></li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Sobre Nós
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Compra.html">
+                        <i class="fa-solid fa-box"></i>
+                        Produtos
+                    </a>
+                </li>
+
+                <li class="ItemMobile">
+                    <a href="Login.html">
+                        <i class="fa-solid fa-circle-user"></i>
+                        Login
+                    </a>
+                </li>
+
+                <li class="ItemMobile">
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Carrinho
+                    </a>
+                </li>
             </ol>
+
         </nav>
 
         <div class="IconesHeader">
+
             <a href="Login.html">
                 <i class="fa-solid fa-circle-user"></i>
             </a>
 
-            <a href="">
+            <a href="#">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
+
+            <button class="MenuHamburguer" type="button" aria-label="Abrir menu" aria-controls="MenuNavegacao"
+                aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
