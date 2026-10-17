@@ -1,20 +1,23 @@
 const botaoMenu = document.querySelector(".MenuHamburguer");
 const menu = document.querySelector("#MenuNavegacao");
-const fecharMenu = document.querySelector(".FecharMenu");
 
-if (botaoMenu && menu && fecharMenu) {
+if (botaoMenu && menu) {
+
+    const icone = botaoMenu.querySelector("i");
 
     function alternarMenu(aberto) {
         menu.classList.toggle("MenuAberto", aberto);
+
         botaoMenu.setAttribute("aria-expanded", aberto);
+
+        icone.classList.toggle("fa-bars", !aberto);
+        icone.classList.toggle("fa-xmark", aberto);
     }
 
     botaoMenu.addEventListener("click", function () {
-        alternarMenu(true);
-    });
+        const aberto = menu.classList.contains("MenuAberto");
 
-    fecharMenu.addEventListener("click", function () {
-        alternarMenu(false);
+        alternarMenu(!aberto);
     });
 
     document.addEventListener("keydown", function (evento) {
@@ -22,6 +25,5 @@ if (botaoMenu && menu && fecharMenu) {
             alternarMenu(false);
         }
     });
-
 
 }
