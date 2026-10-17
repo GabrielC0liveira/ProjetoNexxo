@@ -958,7 +958,8 @@ body {
         padding: 70px 25px 30px;
         transform: translateX(-100%);
         transition: transform 0.3s ease, visibility 0.3s;
-        overflow-y: auto;
+        overflow-y: hidden;
+        touch-action: none;
         visibility: hidden;
     }
     header:has(.MenuHamburguer[aria-expanded="true"]) {
